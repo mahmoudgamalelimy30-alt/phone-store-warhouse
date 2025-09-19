@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding: 5px;
+  background: #111;
+  border-radius: 5px;
+  color: white;
+}
+
+input:focus {
+  background: #000;
+  transform: scale(1.05);
+}
+
+input.error {
+  border: 4px solid red;
+}
+
+body {
+  background: #444;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.head {
+  text-align: center;
+  margin: 10px;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+}
+
+#title {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.sumOfPrice input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#total {
+  background: rgba(255, 0, 0, 0.277);
+  width: 40%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  align-content: center;
+}
+
+#total::before {
+  content: "Total: ";
+}
+
+.countcategory {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 15px;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(76, 4, 120);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: rgb(123, 7, 169);
+  letter-spacing: 1px;
+}
+
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnSearch button {
+  width: 45%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+  color: yellow;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 5px;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  transform: translateX(5%);
+
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
